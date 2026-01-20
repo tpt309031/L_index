@@ -2,25 +2,48 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Tiên chi cho chây đờ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chây đowf và Bi Ti Ci</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  <!-- Thư viện Chart.js -->
-  <script src="data.js"></script>  <!-- Dữ liệu JSON -->
-  <script src="script.js" defer></script>  <!-- JS logic -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js" defer></script>
 </head>
-<body>
-  <h1> (Chây đờ vs Bi Ti Xi)</h1>
-  <select id="year"><option>2025</option><option>2026</option></select>
-  <select id="month">
-    <option>Jan</option><option>Feb</option><option>Mar</option><option>Apr</option><option>May</option><option>Jun</option><option>Jul</option><option>Aug</option><option>Sep</option><option>Oct</option><option>Nov</option><option>Dec</option><!-- ... thêm các tháng --></select>
-  <button onclick="loadData()">Tải dữ liệu</button>
-  
-  <h2>Chart Chỉ số Hàng ngày (Cột: Chỉ số 1 & 2)</h2>
-  <canvas id="dailyChart" width="800" height="400"></canvas>
-  
-  <h2>Chart Tổng Tháng & So sánh Pha (Line: User vs BTC)</h2>
-  <canvas id="monthlyChart" width="800" height="400"></canvas>
-  
-  <div id="analysis"></div>  <!-- Kết quả phân tích pha -->
+<body onload="loadData()">
+  <div class="container">
+    <h1> Chây đờ vs BTC</h1>
+
+    <div class="controls">
+      <label>Năm:</label>
+      <select id="year" onchange="loadData()">
+        <option value="2025">2025</option>
+        <option value="2026">2026</option>
+      </select>
+
+      <label>Tháng:</label>
+      <select id="month" onchange="loadData()">
+        <option value="Jan">Tháng 1</option>
+        <option value="Feb">Tháng 2</option>
+        <option value="Mar">Tháng 3</option>
+        <option value="Apr">Tháng 4</option>
+        <option value="May">Tháng 5</option>
+        <option value="Jun">Tháng 6</option>
+        <option value="Jul">Tháng 7</option>
+        <option value="Aug">Tháng 8</option>
+        <option value="Sep">Tháng 9</option>
+        <option value="Oct">Tháng 10</option>
+        <option value="Nov">Tháng 11</option>
+        <option value="Dec">Tháng 12</option>
+      </select>
+    </div>
+
+    <h2>Chỉ số hàng ngày (Tháng được chọn)</h2>
+    <canvas id="dailyChart" width="900" height="400"></canvas>
+
+    <h2>Tổng chỉ số theo tháng trong năm (so sánh User vs BTC)</h2>
+    <canvas id="monthlyChart" width="900" height="400"></canvas>
+
+    <div id="analysis"></div>
+  </div>
 </body>
 </html>
