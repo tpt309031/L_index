@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chây đowf và Bi Ti Ci</title>
+  <title>Chỉ số May mắn - User vs BTC</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="data.js"></script>
@@ -11,7 +11,7 @@
 </head>
 <body onload="loadData()">
   <div class="container">
-    <h1> Chây đờ vs BTC</h1>
+    <h1>Khảo sát Chỉ số May mắn (User vs BTC)</h1>
 
     <div class="controls">
       <label>Năm:</label>
@@ -37,11 +37,14 @@
       </select>
     </div>
 
-    <h2>Chỉ số hàng ngày (Tháng được chọn)</h2>
-    <canvas id="dailyChart" width="900" height="400"></canvas>
+    <h2>Chỉ số hàng ngày - User</h2>
+    <canvas id="userChart" width="900" height="400"></canvas>
 
-    <h2>Tổng chỉ số theo tháng trong năm (so sánh User vs BTC)</h2>
-    <canvas id="monthlyChart" width="900" height="400"></canvas>
+    <h2>Chỉ số hàng ngày - BTC</h2>
+    <canvas id="btcChart" width="900" height="400"></canvas>
+
+    <h2>So sánh User vs BTC (Line chart - cùng tháng)</h2>
+    <canvas id="compareChart" width="900" height="400"></canvas>
 
     <div id="analysis"></div>
   </div>
