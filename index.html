@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Theo dõi Chỉ số May mắn</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  <!-- Thư viện Chart.js -->
+  <script src="data.js"></script>  <!-- Dữ liệu JSON -->
+  <script src="script.js" defer></script>  <!-- JS logic -->
+</head>
+<body>
+  <h1>Khảo sát & Nghiên cứu Chỉ số May mắn (User vs BTC)</h1>
+  <select id="year"><option>2025</option><option>2026</option></select>
+  <select id="month">
+    <option>Jan</option><option>Feb</option><!-- ... thêm các tháng --></select>
+  <button onclick="loadData()">Tải dữ liệu</button>
+  
+  <h2>Chart Chỉ số Hàng ngày (Cột: Chỉ số 1 & 2)</h2>
+  <canvas id="dailyChart" width="800" height="400"></canvas>
+  
+  <h2>Chart Tổng Tháng & So sánh Pha (Line: User vs BTC)</h2>
+  <canvas id="monthlyChart" width="800" height="400"></canvas>
+  
+  <div id="analysis"></div>  <!-- Kết quả phân tích pha -->
+</body>
+</html>
