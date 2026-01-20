@@ -45,7 +45,7 @@ function loadData() {
       labels: labels,
       datasets: [
         {
-          label: `User - ${year}`,
+          label: `Chây đờ - ${year}`,
           data: userValues,
           backgroundColor: 'rgba(54, 162, 235, 0.7)',
           borderColor: 'rgba(54, 162, 235, 1)',
@@ -53,12 +53,11 @@ function loadData() {
         },
         // Đường trung bình User
         {
-          label: `Trung bình tháng (${userAvg.toFixed(1)})`,
+          label: ` (${userAvg.toFixed(1)})`,
           data: Array(labels.length).fill(userAvg),
           type: 'line',
           borderColor: 'rgba(75, 192, 192, 1)',   // xanh ngọc
           borderWidth: 3,
-          borderDash: [5, 5],
           pointRadius: 0,
           fill: false
         }
@@ -66,7 +65,7 @@ function loadData() {
     },
     options: {
       responsive: true,
-      scales: { y: { beginAtZero: true, title: { display: true, text: 'Chỉ số' } } },
+      scales: { y: { beginAtZero: true, title: { display: true, text: 'Hên xuixui' } } },
       plugins: { legend: { position: 'top' } }
     }
   });
@@ -80,7 +79,7 @@ function loadData() {
       labels: labels,
       datasets: [
         {
-          label: `BTC - ${year}`,
+          label: `Bi Ti Ci - ${year}`,
           data: btcValues,
           backgroundColor: 'rgba(255, 99, 132, 0.7)',
           borderColor: 'rgba(255, 99, 132, 1)',
@@ -88,7 +87,7 @@ function loadData() {
         },
         // Đường trung bình BTC
         {
-          label: `Trung bình tháng (${btcAvg.toFixed(1)})`,
+          label: ` (${btcAvg.toFixed(1)})`,
           data: Array(labels.length).fill(btcAvg),
           type: 'line',
           borderColor: 'rgba(255, 159, 64, 1)',   // cam
@@ -115,7 +114,7 @@ function loadData() {
       labels: labels,
       datasets: [
         {
-          label: `User - ${year}`,
+          label: `Chây đờ - ${year}`,
           data: userValues,
           borderColor: 'rgba(54, 162, 235, 1)',
           backgroundColor: 'rgba(54, 162, 235, 0.1)',
@@ -124,7 +123,7 @@ function loadData() {
           pointRadius: 4
         },
         {
-          label: `BTC - ${year}`,
+          label: `Bi Ti Ci - ${year}`,
           data: btcValues,
           borderColor: 'rgba(255, 99, 132, 1)',
           backgroundColor: 'rgba(255, 99, 132, 0.1)',
@@ -134,7 +133,7 @@ function loadData() {
         },
         // Đường trung bình User
         {
-          label: `TB User (${userAvg.toFixed(1)})`,
+          label: `Chây đờ_Avg (${userAvg.toFixed(1)})`,
           data: Array(labels.length).fill(userAvg),
           borderColor: 'rgba(75, 192, 192, 0.8)',
           borderWidth: 2,
@@ -144,7 +143,7 @@ function loadData() {
         },
         // Đường trung bình BTC
         {
-          label: `TB BTC (${btcAvg.toFixed(1)})`,
+          label: `Bi Ti Ci_Avg (${btcAvg.toFixed(1)})`,
           data: Array(labels.length).fill(btcAvg),
           borderColor: 'rgba(255, 159, 64, 0.8)',
           borderWidth: 2,
@@ -161,14 +160,14 @@ function loadData() {
         legend: { position: 'top' },
         title: {
           display: true,
-          text: `So sánh xu hướng User vs BTC - ${month} ${year}`
+          text: `So sánh  - ${month} ${year}`
         }
       }
     }
   });
 
   // ── Phân tích nhanh đồng pha / nghịch pha trong tháng ──
-  let analysisHTML = `<h3>Phân tích xu hướng trong tháng ${month} ${year}</h3>`;
+  let analysisHTML = `<h3> Trong tháng ${month} ${year}</h3>`;
   let sameDirection = 0;
   let oppositeDirection = 0;
   let totalDays = 0;
