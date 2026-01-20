@@ -23,7 +23,14 @@ function loadData() {
 
   // Labels: Ngày 1, 2, 3...
   const labels = userData.map(d => `Ngày ${d[0]}`);
+// Tính trung bình cho tháng đang chọn (dùng yearIndex để lấy đúng cột 2025/2026)
+const userAvg = userMonthData.length > 0 
+  ? userMonthData.reduce((sum, d) => sum + d[yearIndex], 0) / userMonthData.length 
+  : 0;
 
+const btcAvg = btcMonthData.length > 0 
+  ? btcMonthData.reduce((sum, d) => sum + d[yearIndex], 0) / btcMonthData.length 
+  : 0;
   // Dữ liệu chỉ số theo năm đã chọn
   const userValues = userData.map(d => d[yearIndex]);
   const btcValues  = btcData.map(d  => d[yearIndex]);
